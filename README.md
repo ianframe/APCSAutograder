@@ -4,7 +4,7 @@ This Bash script is used to run an autograder using JUnit for an entire AP CS A 
 ___________
 
 ### Project Dependencies 
-* Java (verify system installation in Terminal with `java -v`)
+* [Java SDK](http://www.oracle.com/technetwork/java/javase/downloads/index.html) (verify system installation in Terminal with `java -v`)
 * [JUnit 4.X](https://junit.org/junit4/)
 _______
 
