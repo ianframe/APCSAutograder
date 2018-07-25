@@ -62,9 +62,25 @@ ___
 ___
 
 ### Configuring JUnit 
+1. Download the latest [.jar of JUnit](http://sourceforge.net/project/showfiles.php?group_id=15278) (as of this writing, v4.12). 
 
+2. Place the `junit-4.10.jar` file (again, exact version may vary) into the necessary directory for Java extensions (most likely `/Library/Java/Extensions/`).
 
+3. Configure the environment variables in your `bash_profile`. To do this, execute `sudo nano ~/.bash_profile`. Note the dot prefix due to the file being a hidden file. You should be prompted to enter your account password to edit this file. Once inside, add the following three statements in addition to whatelse you may have:
 
+    ```
+    export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-10.0.2.jdk/Contents/Home 
+    export JUNIT_HOME=/Library/Java/Extensions
+    export CLASSPATH=.:$JUNIT_HOME/junit-4.10.jar
+    ```
 
+	If you already have a configured `CLASSPATH`, then modify the last line to read:
+    `export CLASSPATH=$CLASSPATH:.:$JUNIT_HOME/junit-4.10.jar`
+    
 
+4. Write the contents of this file out to `.bash_profile` with `CTRL + X`. 
+
+5. Either restart your Terminal session or use `source .bash_profile`. 
+
+6. You can quickly test if your system is configured with JUnit by following [Step 6 and Step 7 from this TutorialsPoint article](https://www.tutorialspoint.com/junit/junit_environment_setup.htm).
 
